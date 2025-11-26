@@ -10,25 +10,32 @@
 // IMC de 35.0 a 39.9: Obesidade grau 2
 // IMC maior ou igual a 40.0: Obesidade grau 3
 
-let peso = parseFloat(prompt("Digite seu peso em kg:"));
-let altura = parseFloat(prompt("Digite sua altura em metros:"));
 
-let imc = peso / (altura * altura);
+let PesoDigitado = parseFloat(prompt("Digite seu peso em quilorama: "));
+let AlturaDigitada = parseFloat(prompt("Digite sua altura: "));
 
-let classificacao = "";
+let IMC = PesoDigitado / (AlturaDigitada * AlturaDigitada);
 
-if (imc < 18.5) {
-    classificacao = "Abaixo do peso";
-} else if (imc >= 18.5 && imc <= 24.9) {
-    classificacao = "Peso normal";
-} else if (imc >= 25.0 && imc <= 29.9) {
-    classificacao = "Sobrepeso";
-} else if (imc >= 30.0 && imc <= 34.9) {
-    classificacao = "Obesidade grau 1";
-} else if (imc >= 35.0 && imc <= 39.9) {
-    classificacao = "Obesidade grau 2";
-} else {
-    classificacao = "Obesidade grau 3";
+if (IMC < 18.5) {
+    alert("Abaixo do peso")
 }
 
-alert("Seu IMC é: " + imc.toFixed(2) + "\nClassificação: " + classificacao);
+else if(IMC >= 18.5 && IMC <= 24.9){
+    alert("Peso Normal")
+}
+
+else if ( IMC >= 25 && IMC <= 29.9){
+    alert("Sborepeso")
+}
+
+else if(IMC >= 30.0 && IMC <= 34.9){
+alert("Obesidade grau 1")
+}
+
+else if(IMC >= 35.0 && IMC <= 39.9){
+alert("Obesidade grau 2")
+}
+
+else{ 
+    alert("Obesidade grau 3, se cuide sua vida está em risco")
+}

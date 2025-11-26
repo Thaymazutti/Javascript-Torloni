@@ -3,14 +3,25 @@
 // crescente. Exibindo uma mensagem indicando se os números estão em ordem crescente ou
 // não.
 
-let n1 = Number ( prompt(" Digite o primeiro número da sua sequência"));
-let n2 = Number ( prompt(" Digite o segundo número da sua sequência"));
-let n3 = Number ( prompt(" Digite o terceiro número da sua sequência"));
 
 
-if ( n1 < n2 && n2 < n3 ) {
-     alert(" Os números estão em ordem crescente");
-} else{
-     alert(" Os números não estão em ordem crescente");
+let primeironumero = parseInt(prompt("Digite o primeiro número da sua sequência "));
+let segundonumero = parseInt(prompt("Digite o segundo número da sua sequência "));
+let terceironumero = parseInt(prompt("Digite o terceiro número da sua sequência "));
+
+if (primeironumero < segundonumero && segundonumero < terceironumero) {
+     alert("Está em ordem crescente.");
 }
 
+// verificar o decrescente
+
+if (primeironumero < segundonumero && segundonumero > terceironumero) {
+     alert("Está em ordem decrescente")
+     
+}
+
+// verificar o aleatório
+
+else{
+alert ("Os números estão em oredem aleatória.")
+}

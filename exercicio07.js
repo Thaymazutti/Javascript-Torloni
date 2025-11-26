@@ -7,20 +7,28 @@
 // Valor total da compra acima de R$ 200,00: desconto de 20%.
 // // Exiba o valor final da compra com o desconto aplicado.
 
-let valorCompra = Number(prompt("Digite o valor total da compra: "));
 
-let desconto = 0;
 
-if (valorCompra <= 100) {
-    desconto = 0;
-} else if (valorCompra <= 200) {
-    desconto = valorCompra * 0.10;
-} else {
-    desconto = valorCompra * 0.20;
-}
+    let valorTotalCompra = parseFloat(prompt("Digite o valor total da compra: "));
 
-let valorFinal = valorCompra - desconto;
+    let desconto;
 
-alert("Valor da compra: R$ " + valorCompra.toFixed(2) +
-      "\nDesconto aplicado: R$ " + desconto.toFixed(2) +
-      "\nValor final a pagar: R$ " + valorFinal.toFixed(2));
+    if (valorTotalCompra <= 100) {
+        desconto = 0;
+    }
+    
+    // else if (valorTotalCompra > 100 && valorTotalCompra <= 200)
+        else if (valorTotalCompra <= 200)
+            {
+                // desconto = 10/100;
+                 desconto = 0.1;
+    }
+
+    else{
+        // desconto = 20/100;
+desconto = 0.2;
+    }
+
+    let valorFinal = valorTotalCompra - (valorTotalCompra*desconto);
+
+    alert(valorFinal);
